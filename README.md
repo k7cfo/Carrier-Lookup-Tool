@@ -141,6 +141,18 @@ The tool is configured to respect Ytel API rate limits:
 - Default: 10 transactions per second
 - Configurable in `carrier_lookup.py` by modifying the `RATE_LIMIT` variable
 
+### Processing Capacity
+
+Based on your configured rate limit, here's how many phone numbers you can process per hour:
+
+- **1 TPS**: 3,600 numbers/hour
+- **10 TPS**: 36,000 numbers/hour (default)
+- **50 TPS**: 180,000 numbers/hour
+- **100 TPS**: 360,000 numbers/hour
+- **150 TPS**: 540,000 numbers/hour
+
+**Note**: Ensure your Ytel API plan supports your desired rate limit before adjusting the `RATE_LIMIT` setting.
+
 ## Configuration
 
 You can modify the following variables in `carrier_lookup.py`:
